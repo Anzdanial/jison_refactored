@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - lib/cli.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>lib/cli.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">64.88</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">187</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">26.48</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">1.40</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">//#!/usr/bin/env node
+
+function getCommandlineOptions () {
+    &quot;use strict&quot;;
+    var version = require(&#039;../package.json&#039;).version;
+    var opts = require(&quot;nomnom&quot;)
+        .script(&#039;jison&#039;)
+        .option(&#039;file&#039;, {
+            flag : true,
+            position : 0,
+            help : &#039;file containing a grammar&#039;
+        })
+        .option(&#039;lexfile&#039;, {
+            flag : true,
+            position : 1,
+            help : &#039;file containing a lexical grammar&#039;
+        })
+        .option(&#039;json&#039;, {
+            abbr : &#039;j&#039;,
+            flag : true,
+            help : &#039;force jison to expect a grammar in JSON format&#039;
+        })
+        .option(&#039;outfile&#039;, {
+            abbr : &#039;o&#039;,
+            metavar : &#039;FILE&#039;,
+            help : &#039;Filename and base module name of the generated parser&#039;
+        })
+        .option(&#039;debug&#039;, {
+            abbr : &#039;t&#039;,
+            flag : true,
+        default:
+            false,
+            help : &#039;Debug mode&#039;
+        })
+        .option(&#039;module-type&#039;, {
+            abbr : &#039;m&#039;,
+        default:
+            &#039;commonjs&#039;,
+            metavar : &#039;TYPE&#039;,
+            help : &#039;The type of module to generate (commonjs, amd, js)&#039;
+        })
+        .option(&#039;parser-type&#039;, {
+            abbr : &#039;p&#039;,
+        default:
+            &#039;lalr&#039;,
+            metavar : &#039;TYPE&#039;,
+            help : &#039;The type of algorithm to use for the parser (lr0, slr,&#039; +
+                &#039;lalr, lr)&#039;
+        })
+        .option(&#039;version&#039;, {
+            abbr : &#039;V&#039;,
+            flag : true,
+            help : &#039;print version and exit&#039;,
+            callback : function () {
+                return version;
+            }
+        }).parse();
+
+    return opts;
+}
+
+var cli = module.exports;
+
+cli.main = function cliMain(opts) {
+    &quot;use strict&quot;;
+    opts = opts || {};
+
+    function processGrammar(raw, lex, opts) {
+        var grammar,
+        parser;
+        grammar = cli.processGrammars(raw, lex, opts.json);
+        parser = cli.generateParserString(opts, grammar);
+        return parser;
+    }
+
+    function processInputFile () {
+        var fs = require(&#039;fs&#039;);
+        var path = require(&#039;path&#039;);
+
+        // getting raw files
+        var lex;
+        if (opts.lexfile) {
+            lex = fs.readFileSync(path.normalize(opts.lexfile), &#039;utf8&#039;);
+        }
+        var raw = fs.readFileSync(path.normalize(opts.file), &#039;utf8&#039;);
+
+        // making best guess at json mode
+        opts.json = path.extname(opts.file) === &#039;.json&#039; || opts.json;
+
+        // setting output file name and module name based on input file name
+        // if they aren&#039;t specified.
+        var name = path.basename((opts.outfile || opts.file));
+
+        name = name.replace(/\..*$/g, &#039;&#039;);
+
+        opts.outfile = opts.outfile || (name + &#039;.js&#039;);
+        if (!opts.moduleName &amp;&amp; name) {
+            opts.moduleName = name.replace(/-\w/g,
+                    function (match) {
+                    return match.charAt(1).toUpperCase();
+                });
+        }
+
+        var parser = processGrammar(raw, lex, opts);
+        fs.writeFileSync(opts.outfile, parser);
+    }
+
+    function readin(cb) {
+        var stdin = process.openStdin(),
+        data = &#039;&#039;;
+
+        stdin.setEncoding(&#039;utf8&#039;);
+        stdin.addListener(&#039;data&#039;, function (chunk) {
+            data += chunk;
+        });
+        stdin.addListener(&#039;end&#039;, function () {
+            cb(data);
+        });
+    }
+
+    function processStdin () {
+        readin(function (raw) {
+            console.log(processGrammar(raw, null, opts));
+        });
+    }
+
+    // if an input file wasn&#039;t given, assume input on stdin
+    if (opts.file) {
+        processInputFile();
+    } else {
+        processStdin();
+    }
+};
+
+cli.generateParserString = function generateParserString(opts, grammar) {
+    &quot;use strict&quot;;
+    opts = opts || {};
+    var jison = require(&#039;./jison.js&#039;);
+
+    var settings = grammar.options || {};
+
+    if (opts[&#039;parser-type&#039;]) {
+        settings.type = opts[&#039;parser-type&#039;];
+    }
+    if (opts.moduleName) {
+        settings.moduleName = opts.moduleName;
+    }
+    settings.debug = opts.debug;
+    if (!settings.moduleType) {
+        settings.moduleType = opts[&#039;module-type&#039;];
+    }
+
+    var generator = new jison.Generator(grammar, settings);
+    return generator.generate(settings);
+};
+
+cli.processGrammars = function processGrammars(file, lexFile, jsonMode) {
+    &quot;use strict&quot;;
+    lexFile = lexFile || false;
+    jsonMode = jsonMode || false;
+    var ebnfParser = require(&#039;ebnf-parser&#039;);
+    var cjson = require(&#039;cjson&#039;);
+    var grammar;
+    try {
+        if (jsonMode) {
+            grammar = cjson.parse(file);
+        } else {
+            grammar = ebnfParser.parse(file);
+        }
+    } catch (e) {
+        throw new Error(&#039;Could not parse jison grammar&#039;);
+    }
+    try {
+        if (lexFile) {
+            grammar.lex = require(&#039;lex-parser&#039;).parse(lexFile);
+        }
+    } catch (e) {
+        throw new Error(&#039;Could not parse lex grammar&#039;);
+    }
+    return grammar;
+};
+
+
+if (require.main === module) {
+    var opts = getCommandlineOptions();
+    cli.main(opts);
+}</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

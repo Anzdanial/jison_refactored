@@ -1,0 +1,2107 @@
+Mean per-function logical LOC: 5.843882394977285
+Mean per-function parameter count: 0.8135495890970343
+Mean per-function cyclomatic complexity: 2.049493389821857
+Mean per-function Halstead effort: 2631.9258749068376
+Mean per-module maintainability index: 118.70715713151272
+First-order density: 25%
+Change cost: 62.5%
+Core size: 0%
+
+/home/muhammadb/Desktop/jison_refactored/lib/cli.js
+
+  Physical LOC: 185
+  Logical LOC: 112
+  Mean parameter count: 1
+  Cyclomatic complexity: 18
+  Cyclomatic complexity density: 16.071428571428573%
+  Maintainability index: 110.89053598763113
+  Dependency count: 8
+
+  Function: getCommandlineOptions
+    Line No.: 3
+    Physical LOC: 58
+    Logical LOC: 32
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 3.125%
+    Halstead difficulty: 8.540816326530614
+    Halstead volume: 931.4189782252839
+    Halstead effort: 7955.078416066967
+
+  Function: callback
+    Line No.: 54
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 0.5
+    Halstead volume: 2
+    Halstead effort: 1
+
+  Function: cliMain
+    Line No.: 64
+    Physical LOC: 70
+    Logical LOC: 10
+    Parameter count: 1
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 30%
+    Halstead difficulty: 6.5
+    Halstead volume: 100
+    Halstead effort: 650
+
+  Function: processGrammar
+    Line No.: 68
+    Physical LOC: 7
+    Logical LOC: 5
+    Parameter count: 3
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 20%
+    Halstead difficulty: 5
+    Halstead volume: 102.7985828955553
+    Halstead effort: 513.9929144777765
+
+  Function: processInputFile
+    Line No.: 76
+    Physical LOC: 31
+    Logical LOC: 14
+    Parameter count: 0
+    Cyclomatic complexity: 6
+    Cyclomatic complexity density: 42.857142857142854%
+    Halstead difficulty: 13.46551724137931
+    Halstead volume: 697.1725804302445
+    Halstead effort: 9387.78940200036
+
+  Function: <anonymous>
+    Line No.: 99
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.875
+    Halstead volume: 28.07354922057604
+    Halstead effort: 52.63790478858007
+
+  Function: readin
+    Line No.: 108
+    Physical LOC: 12
+    Logical LOC: 5
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 20%
+    Halstead difficulty: 3.541666666666667
+    Halstead volume: 122.6238852375102
+    Halstead effort: 434.29292688284863
+
+  Function: <anonymous>
+    Line No.: 113
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 0.75
+    Halstead volume: 6.339850002884624
+    Halstead effort: 4.754887502163468
+
+  Function: <anonymous>
+    Line No.: 116
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 0.5
+    Halstead volume: 4.754887502163468
+    Halstead effort: 2.377443751081734
+
+  Function: processStdin
+    Line No.: 121
+    Physical LOC: 5
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 8
+    Halstead effort: 8
+
+  Function: <anonymous>
+    Line No.: 122
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.1666666666666667
+    Halstead volume: 30
+    Halstead effort: 35
+
+  Function: generateParserString
+    Line No.: 135
+    Physical LOC: 21
+    Logical LOC: 13
+    Parameter count: 2
+    Cyclomatic complexity: 6
+    Cyclomatic complexity density: 46.15384615384615%
+    Halstead difficulty: 11.944444444444445
+    Halstead volume: 384.5883937646083
+    Halstead effort: 4593.6947032994885
+
+  Function: processGrammars
+    Line No.: 157
+    Physical LOC: 25
+    Logical LOC: 19
+    Parameter count: 3
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 26.31578947368421%
+    Halstead difficulty: 12.222222222222223
+    Halstead volume: 349.77463164918527
+    Halstead effort: 4275.023275712265
+
+/home/muhammadb/Desktop/jison_refactored/lib/jison.js
+
+  Physical LOC: 1911
+  Logical LOC: 1134
+  Mean parameter count: 1.0583941605839415
+  Cyclomatic complexity: 228
+  Cyclomatic complexity density: 20.105820105820104%
+  Maintainability index: 106.94114800480827
+  Dependency count: 10
+
+  Function: print
+    Line No.: 23
+    Physical LOC: 1
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 1.5
+    Halstead volume: 34.86917501586544
+    Halstead effort: 52.303762523798156
+
+  Function: print
+    Line No.: 27
+    Physical LOC: 1
+    Logical LOC: 0
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: Infinity%
+    Halstead difficulty: 0
+    Halstead volume: 0
+    Halstead effort: 0
+
+  Function: <anonymous>
+    Line No.: 30
+    Physical LOC: 1886
+    Logical LOC: 123
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 0.8130081300813009%
+    Halstead difficulty: 10.947761194029852
+    Halstead volume: 4704.0354682634015
+    Halstead effort: 51498.65695479411
+
+  Function: each
+    Line No.: 33
+    Physical LOC: 12
+    Logical LOC: 7
+    Parameter count: 2
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 42.857142857142854%
+    Halstead difficulty: 10
+    Halstead volume: 118.30376252379817
+    Halstead effort: 1183.0376252379817
+
+  Function: Nonterminal
+    Line No.: 47
+    Physical LOC: 7
+    Logical LOC: 5
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 20%
+    Halstead difficulty: 3.5555555555555554
+    Halstead volume: 107.31275182609167
+    Halstead effort: 381.55645093721483
+
+  Function: Nonterminal_toString
+    Line No.: 54
+    Physical LOC: 9
+    Logical LOC: 6
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 7.466666666666667
+    Halstead volume: 230.70165975890765
+    Halstead effort: 1722.5723928665104
+
+  Function: Production
+    Line No.: 66
+    Physical LOC: 8
+    Logical LOC: 6
+    Parameter count: 3
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 16.666666666666664%
+    Halstead difficulty: 3.1500000000000004
+    Halstead volume: 125.81495041679713
+    Halstead effort: 396.317093812911
+
+  Function: Production_toString
+    Line No.: 74
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.3333333333333335
+    Halstead volume: 46.50699332842308
+    Halstead effort: 108.51631776632053
+
+  Function: Jison_Generator
+    Line No.: 81
+    Physical LOC: 33
+    Logical LOC: 22
+    Parameter count: 2
+    Cyclomatic complexity: 8
+    Cyclomatic complexity density: 36.36363636363637%
+    Halstead difficulty: 13.22972972972973
+    Halstead volume: 904.7639251168273
+    Halstead effort: 11969.782198505052
+
+  Function: processGrammarDef
+    Line No.: 115
+    Physical LOC: 36
+    Logical LOC: 20
+    Parameter count: 1
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 25%
+    Halstead difficulty: 18.75
+    Halstead volume: 734.6709084218526
+    Halstead effort: 13775.079532909736
+
+  Function: augmentGrammar
+    Line No.: 152
+    Physical LOC: 27
+    Logical LOC: 15
+    Parameter count: 1
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 15.685185185185183
+    Halstead volume: 734.7098518821019
+    Halstead effort: 11524.060084150746
+
+  Function: processOperators
+    Line No.: 181
+    Physical LOC: 10
+    Logical LOC: 12
+    Parameter count: 1
+    Cyclomatic complexity: 4
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 16.363636363636363
+    Halstead volume: 257.84303149524976
+    Halstead effort: 4219.249606285905
+
+  Function: buildProductions
+    Line No.: 193
+    Physical LOC: 171
+    Logical LOC: 39
+    Parameter count: 5
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 12.82051282051282%
+    Halstead difficulty: 18
+    Halstead volume: 1351.3614770553834
+    Halstead effort: 24324.5065869969
+
+  Function: addSymbol
+    Line No.: 208
+    Physical LOC: 6
+    Logical LOC: 3
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 66.66666666666666%
+    Halstead difficulty: 7
+    Halstead volume: 68.11428751370197
+    Halstead effort: 476.80001259591376
+
+  Function: <anonymous>
+    Line No.: 236
+    Physical LOC: 6
+    Logical LOC: 3
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 66.66666666666666%
+    Halstead difficulty: 4.166666666666667
+    Halstead volume: 58.81033751683406
+    Halstead effort: 245.0430729868086
+
+  Function: buildProduction
+    Line No.: 261
+    Physical LOC: 102
+    Logical LOC: 60
+    Parameter count: 1
+    Cyclomatic complexity: 22
+    Cyclomatic complexity density: 36.666666666666664%
+    Halstead difficulty: 61.189655172413794
+    Halstead volume: 3266.474203039946
+    Halstead effort: 199874.43011359946
+
+  Function: <anonymous>
+    Line No.: 303
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 200%
+    Halstead difficulty: 4
+    Halstead volume: 39
+    Halstead effort: 156
+
+  Function: <anonymous>
+    Line No.: 301
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 200%
+    Halstead difficulty: 4
+    Halstead volume: 39
+    Halstead effort: 156
+
+  Function: <anonymous>
+    Line No.: 316
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 200%
+    Halstead difficulty: 2.8571428571428568
+    Halstead volume: 50.18947501009619
+    Halstead effort: 143.39850002884623
+
+  Function: <anonymous>
+    Line No.: 312
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 200%
+    Halstead difficulty: 3.3333333333333335
+    Halstead volume: 66.41714012534482
+    Halstead effort: 221.39046708448274
+
+  Function: <anonymous>
+    Line No.: 323
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.7999999999999998
+    Halstead volume: 27
+    Halstead effort: 48.599999999999994
+
+  Function: <anonymous>
+    Line No.: 331
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.7999999999999998
+    Halstead volume: 27
+    Halstead effort: 48.599999999999994
+
+  Function: createParser
+    Line No.: 367
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 8
+    Halstead effort: 8
+
+  Function: trace
+    Line No.: 372
+    Physical LOC: 1
+    Logical LOC: 0
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: Infinity%
+    Halstead difficulty: 0
+    Halstead volume: 0
+    Halstead effort: 0
+
+  Function: warn
+    Line No.: 374
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 2.3333333333333335
+    Halstead volume: 100
+    Halstead effort: 233.33333333333334
+
+  Function: error
+    Line No.: 379
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.5
+    Halstead volume: 10
+    Halstead effort: 15
+
+  Function: trace
+    Line No.: 386
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 22.458839376460833
+    Halstead effort: 22.458839376460833
+
+  Function: beforeprocessGrammar
+    Line No.: 389
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 11.60964047443681
+    Halstead effort: 11.60964047443681
+
+  Function: afteraugmentGrammar
+    Line No.: 392
+    Physical LOC: 6
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 3.5
+    Halstead volume: 43.18506523353572
+    Halstead effort: 151.147728317375
+
+  Function: <anonymous>
+    Line No.: 394
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.4
+    Halstead volume: 30.880904142633646
+    Halstead effort: 43.2332657996871
+
+  Function: computeLookaheads
+    Line No.: 407
+    Physical LOC: 8
+    Logical LOC: 6
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 3.888888888888889
+    Halstead volume: 102.7985828955553
+    Halstead effort: 399.7722668160484
+
+  Function: <anonymous>.computeLookaheads
+    Line No.: 410
+    Physical LOC: 1
+    Logical LOC: 0
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: Infinity%
+    Halstead difficulty: 0
+    Halstead volume: 0
+    Halstead effort: 0
+
+  Function: followSets
+    Line No.: 417
+    Physical LOC: 44
+    Logical LOC: 7
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 28.57142857142857%
+    Halstead difficulty: 5.333333333333333
+    Halstead volume: 109.39293667703852
+    Halstead effort: 583.4289956108721
+
+  Function: Follow_prod_forEach
+    Line No.: 427
+    Physical LOC: 32
+    Logical LOC: 23
+    Parameter count: 2
+    Cyclomatic complexity: 8
+    Cyclomatic complexity density: 34.78260869565217%
+    Halstead difficulty: 22.25
+    Halstead volume: 943.8586626218754
+    Halstead effort: 21000.855243336726
+
+  Function: first
+    Line No.: 463
+    Physical LOC: 26
+    Logical LOC: 21
+    Parameter count: 1
+    Cyclomatic complexity: 8
+    Cyclomatic complexity density: 38.095238095238095%
+    Halstead difficulty: 19.852941176470587
+    Halstead volume: 480
+    Halstead effort: 9529.411764705881
+
+  Function: firstSets
+    Line No.: 491
+    Physical LOC: 31
+    Logical LOC: 15
+    Parameter count: 0
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 20%
+    Halstead difficulty: 13.928571428571427
+    Halstead volume: 316.3624125497598
+    Halstead effort: 4406.476460514511
+
+  Function: FirstSets_forEach
+    Line No.: 502
+    Physical LOC: 7
+    Logical LOC: 4
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 5.666666666666666
+    Halstead volume: 117.20671786825557
+    Halstead effort: 664.1714012534482
+
+  Function: <anonymous>
+    Line No.: 512
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.2
+    Halstead volume: 25.26619429851844
+    Halstead effort: 30.319433158222125
+
+  Function: nullableSets
+    Line No.: 524
+    Physical LOC: 33
+    Logical LOC: 15
+    Parameter count: 0
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 15
+    Halstead volume: 365.3589740763779
+    Halstead effort: 5480.384611145668
+
+  Function: <anonymous>
+    Line No.: 535
+    Physical LOC: 10
+    Logical LOC: 9
+    Parameter count: 2
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 55.55555555555556%
+    Halstead difficulty: 10.909090909090908
+    Halstead volume: 193.26196660226546
+    Halstead effort: 2108.3123629338047
+
+  Function: nullable
+    Line No.: 559
+    Physical LOC: 19
+    Logical LOC: 15
+    Parameter count: 1
+    Cyclomatic complexity: 6
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 14.181818181818183
+    Halstead volume: 248.79590758313572
+    Halstead effort: 3528.3783257244704
+
+  Function: beforenullableSets
+    Line No.: 582
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 11.60964047443681
+    Halstead effort: 11.60964047443681
+
+  Function: beforefirstSets
+    Line No.: 585
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 11.60964047443681
+    Halstead effort: 11.60964047443681
+
+  Function: beforefollowSets
+    Line No.: 588
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 11.60964047443681
+    Halstead effort: 11.60964047443681
+
+  Function: afterfollowSets
+    Line No.: 591
+    Physical LOC: 6
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 3.5
+    Halstead volume: 43.18506523353572
+    Halstead effort: 151.147728317375
+
+  Function: <anonymous>
+    Line No.: 593
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 0.625
+    Halstead volume: 13.931568569324174
+    Halstead effort: 8.707230355827608
+
+  Function: buildTable
+    Line No.: 604
+    Physical LOC: 7
+    Logical LOC: 5
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 4
+    Halstead volume: 140.87213211613133
+    Halstead effort: 563.4885284645253
+
+  Function: Item
+    Line No.: 613
+    Physical LOC: 8
+    Logical LOC: 6
+    Parameter count: 4
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 6.8
+    Halstead volume: 254.75441052116813
+    Halstead effort: 1732.3299915439432
+
+  Function: remainingHandle
+    Line No.: 621
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.3333333333333335
+    Halstead volume: 46.50699332842308
+    Halstead effort: 108.51631776632053
+
+  Function: eq
+    Line No.: 624
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.5
+    Halstead volume: 23.264662506490403
+    Halstead effort: 58.161656266226004
+
+  Function: handleToString
+    Line No.: 627
+    Physical LOC: 5
+    Logical LOC: 3
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 66.66666666666666%
+    Halstead difficulty: 5.95
+    Halstead volume: 134.8862737612612
+    Halstead effort: 802.5733288795042
+
+  Function: toString
+    Line No.: 632
+    Physical LOC: 6
+    Logical LOC: 3
+    Parameter count: 0
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 8.71875
+    Halstead volume: 278.63137138648347
+    Halstead effort: 2429.3172692759026
+
+  Function: afterconstructor
+    Line No.: 641
+    Physical LOC: 11
+    Logical LOC: 9
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 22.22222222222222%
+    Halstead difficulty: 9.28125
+    Halstead volume: 292.5629399558076
+    Halstead effort: 2715.3497864648393
+
+  Function: concat
+    Line No.: 652
+    Physical LOC: 8
+    Logical LOC: 6
+    Parameter count: 1
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 10
+    Halstead volume: 217.13097389073664
+    Halstead effort: 2171.3097389073664
+
+  Function: push
+    Line No.: 660
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 2.857142857142857
+    Halstead volume: 62.26976913547136
+    Halstead effort: 177.91362610134675
+
+  Function: contains
+    Line No.: 664
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.25
+    Halstead volume: 23.264662506490403
+    Halstead effort: 29.080828133113002
+
+  Function: toValue
+    Line No.: 667
+    Physical LOC: 5
+    Logical LOC: 3
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 3.5999999999999996
+    Halstead volume: 104
+    Halstead effort: 374.4
+
+  Function: <anonymous>
+    Line No.: 668
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.5
+    Halstead volume: 10
+    Halstead effort: 15
+
+  Function: toValue_inner
+    Line No.: 669
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 0.5
+    Halstead volume: 2
+    Halstead effort: 1
+
+  Function: closureOperation
+    Line No.: 674
+    Physical LOC: 40
+    Logical LOC: 12
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 16.666666666666664%
+    Halstead difficulty: 8.571428571428571
+    Halstead volume: 215.4932375338944
+    Halstead effort: 1847.0848931476662
+
+  Function: CO_set_forEach
+    Line No.: 684
+    Physical LOC: 23
+    Logical LOC: 12
+    Parameter count: 1
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 41.66666666666667%
+    Halstead difficulty: 12.527777777777777
+    Halstead volume: 388.6384796102058
+    Halstead effort: 4868.776508450078
+
+  Function: CO_nt_forEach
+    Line No.: 690
+    Physical LOC: 5
+    Logical LOC: 3
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 66.66666666666666%
+    Halstead difficulty: 4.666666666666666
+    Halstead volume: 88
+    Halstead effort: 410.66666666666663
+
+  Function: gotoOperation
+    Line No.: 715
+    Physical LOC: 12
+    Logical LOC: 4
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 6.4
+    Halstead volume: 125.09775004326937
+    Halstead effort: 800.625600276924
+
+  Function: goto_forEach
+    Line No.: 719
+    Physical LOC: 5
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 4.25
+    Halstead volume: 116.75790004038474
+    Halstead effort: 496.22107517163516
+
+  Function: canonicalCollection
+    Line No.: 730
+    Physical LOC: 21
+    Logical LOC: 13
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 15.384615384615385%
+    Halstead difficulty: 12.899999999999999
+    Halstead volume: 395
+    Halstead effort: 5095.499999999999
+
+  Function: CC_itemSet_forEach
+    Line No.: 743
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 5
+    Halstead volume: 97.67226489021297
+    Halstead effort: 488.3613244510649
+
+  Function: canonicalCollectionInsert
+    Line No.: 753
+    Physical LOC: 19
+    Logical LOC: 14
+    Parameter count: 4
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 35.714285714285715%
+    Halstead difficulty: 18.2
+    Halstead volume: 549.8389590100714
+    Halstead effort: 10007.0690539833
+
+  Function: parseTable
+    Line No.: 774
+    Physical LOC: 94
+    Logical LOC: 13
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 15.384615384615385%
+    Halstead difficulty: 9.714285714285715
+    Halstead volume: 307.70804128086564
+    Halstead effort: 2989.1638295855523
+
+  Function: <anonymous>
+    Line No.: 785
+    Physical LOC: 72
+    Logical LOC: 8
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 25%
+    Halstead difficulty: 7.2
+    Halstead volume: 226.17809780285066
+    Halstead effort: 1628.4823041805248
+
+  Function: <anonymous>
+    Line No.: 791
+    Physical LOC: 14
+    Logical LOC: 6
+    Parameter count: 2
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 6.192307692307692
+    Halstead volume: 181.52097998526924
+    Halstead effort: 1124.0337606780133
+
+  Function: <anonymous>
+    Line No.: 808
+    Physical LOC: 7
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 3.611111111111111
+    Halstead volume: 87.56916320732489
+    Halstead effort: 316.2219782486732
+
+  Function: <anonymous>
+    Line No.: 819
+    Physical LOC: 36
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 3.666666666666667
+    Halstead volume: 74.23092131656186
+    Halstead effort: 272.1800448273935
+
+  Function: <anonymous>
+    Line No.: 823
+    Physical LOC: 31
+    Logical LOC: 23
+    Parameter count: 1
+    Cyclomatic complexity: 10
+    Cyclomatic complexity density: 43.47826086956522%
+    Halstead difficulty: 19.599999999999998
+    Halstead volume: 971.3448030319311
+    Halstead effort: 19038.358139425847
+
+  Function: <anonymous>
+    Line No.: 860
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 2.0999999999999996
+    Halstead volume: 85.11011351724513
+    Halstead effort: 178.73123838621473
+
+  Function: findDefaults
+    Line No.: 870
+    Physical LOC: 16
+    Logical LOC: 3
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 6.125
+    Halstead volume: 48.43204266092217
+    Halstead effort: 296.6462612981483
+
+  Function: <anonymous>
+    Line No.: 872
+    Physical LOC: 11
+    Logical LOC: 8
+    Parameter count: 2
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 37.5%
+    Halstead difficulty: 10
+    Halstead volume: 180.0850143339292
+    Halstead effort: 1800.850143339292
+
+  Function: resolveConflict
+    Line No.: 888
+    Physical LOC: 38
+    Logical LOC: 39
+    Parameter count: 4
+    Cyclomatic complexity: 11
+    Cyclomatic complexity density: 28.205128205128204%
+    Halstead difficulty: 23.258064516129032
+    Halstead volume: 1015.9928228209899
+    Halstead effort: 23630.026621094636
+
+  Function: parser_generate
+    Line No.: 927
+    Physical LOC: 22
+    Logical LOC: 15
+    Parameter count: 1
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 12.657894736842106
+    Halstead volume: 365
+    Halstead effort: 4620.131578947368
+
+  Function: generateAMDModule
+    Line No.: 950
+    Physical LOC: 14
+    Logical LOC: 4
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 7.363636363636364
+    Halstead volume: 346.7937417270813
+    Halstead effort: 2553.6630072630533
+
+  Function: generateCommonJSModule
+    Line No.: 965
+    Physical LOC: 15
+    Logical LOC: 4
+    Parameter count: 1
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 75%
+    Halstead difficulty: 6
+    Halstead volume: 381.5597130937755
+    Halstead effort: 2289.358278562653
+
+  Function: generateModule
+    Line No.: 981
+    Physical LOC: 81
+    Logical LOC: 5
+    Parameter count: 1
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 60%
+    Halstead difficulty: 6.410256410256411
+    Halstead volume: 1266.0485972529104
+    Halstead effort: 8115.6961362366055
+
+  Function: generateModuleExpr
+    Line No.: 1064
+    Physical LOC: 19
+    Logical LOC: 11
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 18.181818181818183%
+    Halstead difficulty: 8.75
+    Halstead volume: 309.0676876406255
+    Halstead effort: 2704.342266855473
+
+  Function: addTokenStack
+    Line No.: 1084
+    Physical LOC: 16
+    Logical LOC: 10
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 10%
+    Halstead difficulty: 4.5600000000000005
+    Halstead volume: 346.7937417270813
+    Halstead effort: 1581.3794622754908
+
+  Function: tokenStackLex
+    Line No.: 1102
+    Physical LOC: 13
+    Logical LOC: 8
+    Parameter count: 0
+    Cyclomatic complexity: 6
+    Cyclomatic complexity density: 75%
+    Halstead difficulty: 11
+    Halstead volume: 190.16483617504394
+    Halstead effort: 2091.8131979254836
+
+  Function: removeErrorRecovery
+    Line No.: 1117
+    Physical LOC: 16
+    Logical LOC: 11
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 9.090909090909092%
+    Halstead difficulty: 5.678571428571429
+    Halstead volume: 508.746284125034
+    Halstead effort: 2888.9521134243
+
+  Function: generateModule_
+    Line No.: 1137
+    Physical LOC: 35
+    Logical LOC: 15
+    Parameter count: 0
+    Cyclomatic complexity: 6
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 13.543478260869565
+    Halstead volume: 951.0093858929715
+    Halstead effort: 12879.974943724375
+
+  Function: lrGeneratorMixin.generateTableCode
+    Line No.: 1174
+    Physical LOC: 80
+    Logical LOC: 13
+    Parameter count: 1
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 23.076923076923077%
+    Halstead difficulty: 12.260869565217392
+    Halstead volume: 451.37690549115706
+    Halstead effort: 5534.273362978535
+
+  Function: <anonymous>
+    Line No.: 1183
+    Physical LOC: 38
+    Logical LOC: 31
+    Parameter count: 1
+    Cyclomatic complexity: 8
+    Cyclomatic complexity density: 25.806451612903224%
+    Halstead difficulty: 28.666666666666668
+    Halstead volume: 863.5099970355328
+    Halstead effort: 24753.953248351943
+
+  Function: <anonymous>
+    Line No.: 1232
+    Physical LOC: 15
+    Logical LOC: 8
+    Parameter count: 1
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 37.5%
+    Halstead difficulty: 12.222222222222223
+    Halstead volume: 182.66088307807416
+    Halstead effort: 2232.5219042875733
+
+  Function: createVariable
+    Line No.: 1261
+    Physical LOC: 11
+    Logical LOC: 7
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 28.57142857142857%
+    Halstead difficulty: 11
+    Halstead volume: 120.92782504182705
+    Halstead effort: 1330.2060754600975
+
+  Function: commonjsMain
+    Line No.: 1278
+    Physical LOC: 8
+    Logical LOC: 5
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 5.473684210526316
+    Halstead volume: 232.98948760601
+    Halstead effort: 1275.3108795276337
+
+  Function: printAction
+    Line No.: 1289
+    Physical LOC: 7
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 150%
+    Halstead difficulty: 6.363636363636363
+    Halstead volume: 150.11730005192322
+    Halstead effort: 955.2919094213296
+
+  Function: beforeparseTable
+    Line No.: 1298
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 11.60964047443681
+    Halstead effort: 11.60964047443681
+
+  Function: afterparseTable
+    Line No.: 1301
+    Physical LOC: 12
+    Logical LOC: 5
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 6.545454545454546
+    Halstead volume: 144.4295354570819
+    Halstead effort: 945.3569593554452
+
+  Function: <anonymous>
+    Line No.: 1304
+    Physical LOC: 5
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.8846153846153846
+    Halstead volume: 152
+    Halstead effort: 438.46153846153845
+
+  Function: aftercanonicalCollection
+    Line No.: 1313
+    Physical LOC: 8
+    Logical LOC: 3
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 3.75
+    Halstead volume: 55.350905898196764
+    Halstead effort: 207.56589711823787
+
+  Function: <anonymous>
+    Line No.: 1317
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.0999999999999996
+    Halstead volume: 77.70923408096293
+    Halstead effort: 163.1893915700221
+
+  Function: createParser
+    Line No.: 1325
+    Physical LOC: 24
+    Logical LOC: 10
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 10%
+    Halstead difficulty: 6
+    Halstead volume: 263.1064654996005
+    Halstead effort: 1578.638792997603
+
+  Function: bind
+    Line No.: 1333
+    Physical LOC: 6
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 8
+    Halstead effort: 8
+
+  Function: <anonymous>
+    Line No.: 1334
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 3
+    Halstead volume: 53.1508495181978
+    Halstead effort: 159.45254855459342
+
+  Function: traceParseError
+    Line No.: 1354
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.25
+    Halstead volume: 18.094737505048094
+    Halstead effort: 22.61842188131012
+
+  Function: parseError
+    Line No.: 1358
+    Physical LOC: 9
+    Logical LOC: 6
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 8
+    Halstead volume: 97.67226489021297
+    Halstead effort: 781.3781191217038
+
+  Function: parse
+    Line No.: 1370
+    Physical LOC: 238
+    Logical LOC: 99
+    Parameter count: 1
+    Cyclomatic complexity: 20
+    Cyclomatic complexity density: 20.2020202020202%
+    Halstead difficulty: 69.33333333333333
+    Halstead volume: 4004.431389922281
+    Halstead effort: 277640.5763679448
+
+  Function: popStack
+    Line No.: 1414
+    Physical LOC: 5
+    Logical LOC: 3
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 5.666666666666667
+    Halstead volume: 99.65784284662088
+    Halstead effort: 564.7277761308517
+
+  Function: parser_init
+    Line No.: 1609
+    Physical LOC: 8
+    Logical LOC: 6
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 16.666666666666664%
+    Halstead difficulty: 3.125
+    Halstead volume: 142.8429080801566
+    Halstead effort: 446.3840877504894
+
+  Function: lr0_afterconstructor
+    Line No.: 1624
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 8
+    Halstead effort: 8
+
+  Function: afterconstructor
+    Line No.: 1638
+    Physical LOC: 34
+    Logical LOC: 20
+    Parameter count: 2
+    Cyclomatic complexity: 4
+    Cyclomatic complexity density: 20%
+    Halstead difficulty: 10.806451612903224
+    Halstead volume: 664.3364485726424
+    Halstead effort: 7179.119686188232
+
+  Function: go_
+    Line No.: 1650
+    Physical LOC: 5
+    Logical LOC: 3
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 4
+    Halstead volume: 109.39293667703852
+    Halstead effort: 437.5717467081541
+
+  Function: <anonymous>
+    Line No.: 1652
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.8
+    Halstead volume: 41.20902501875006
+    Halstead effort: 115.38527005250016
+
+  Function: LALR_lookaheads
+    Line No.: 1673
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 200%
+    Halstead difficulty: 3.5714285714285716
+    Halstead volume: 71.69925001442313
+    Halstead effort: 256.0687500515112
+
+  Function: LALR_go
+    Line No.: 1676
+    Physical LOC: 7
+    Logical LOC: 5
+    Parameter count: 2
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 60%
+    Halstead difficulty: 8.25
+    Halstead volume: 175.69269691115042
+    Halstead effort: 1449.4647495169909
+
+  Function: LALR_goPath
+    Line No.: 1683
+    Physical LOC: 12
+    Logical LOC: 14
+    Parameter count: 2
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 35.714285714285715%
+    Halstead difficulty: 17.386363636363637
+    Halstead volume: 474.0602562722345
+    Halstead effort: 8242.184001096804
+
+  Function: LALR_buildNewGrammar
+    Line No.: 1696
+    Physical LOC: 32
+    Logical LOC: 3
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 3.75
+    Halstead volume: 58.81033751683406
+    Halstead effort: 220.53876568812774
+
+  Function: <anonymous>
+    Line No.: 1700
+    Physical LOC: 27
+    Logical LOC: 3
+    Parameter count: 2
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 66.66666666666666%
+    Halstead difficulty: 2.75
+    Halstead volume: 68.11428751370197
+    Halstead effort: 187.3142906626804
+
+  Function: <anonymous>
+    Line No.: 1701
+    Physical LOC: 23
+    Logical LOC: 15
+    Parameter count: 1
+    Cyclomatic complexity: 4
+    Cyclomatic complexity density: 26.666666666666668%
+    Halstead difficulty: 13.392857142857142
+    Halstead volume: 745.2057069089891
+    Halstead effort: 9980.433574673962
+
+  Function: LALR_unionLookaheads
+    Line No.: 1728
+    Physical LOC: 27
+    Logical LOC: 4
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 6.5625
+    Halstead volume: 113.29982727264704
+    Halstead effort: 743.5301164767462
+
+  Function: union_states_forEach
+    Line No.: 1733
+    Physical LOC: 21
+    Logical LOC: 4
+    Parameter count: 1
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 75%
+    Halstead difficulty: 7.5
+    Halstead volume: 156.0801066523054
+    Halstead effort: 1170.6007998922905
+
+  Function: union_reduction_forEach
+    Line No.: 1737
+    Physical LOC: 16
+    Logical LOC: 5
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 7.2
+    Halstead volume: 215.4932375338944
+    Halstead effort: 1551.5513102440395
+
+  Function: reduction_goes_forEach
+    Line No.: 1742
+    Physical LOC: 9
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.75
+    Halstead volume: 41.20902501875006
+    Halstead effort: 72.1157937828126
+
+  Function: goes_follows_forEach
+    Line No.: 1743
+    Physical LOC: 7
+    Logical LOC: 4
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 5.25
+    Halstead volume: 98.9912279734977
+    Halstead effort: 519.703946860863
+
+  Function: trace
+    Line No.: 1762
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 22.458839376460833
+    Halstead effort: 22.458839376460833
+
+  Function: beforebuildNewGrammar
+    Line No.: 1765
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 2.25
+    Halstead volume: 53.88872502451932
+    Halstead effort: 121.24963130516846
+
+  Function: beforeunionLookaheads
+    Line No.: 1769
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 11.60964047443681
+    Halstead effort: 11.60964047443681
+
+  Function: lr_aftercontructor
+    Line No.: 1780
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 1.3333333333333333
+    Halstead volume: 18.575424759098897
+    Halstead effort: 24.76723301213186
+
+  Function: SLR_lookAhead
+    Line No.: 1792
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.1428571428571428
+    Halstead volume: 44.37895002019238
+    Halstead effort: 50.718800023077
+
+  Function: LR_lookAheads
+    Line No.: 1804
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.3333333333333333
+    Halstead volume: 13.931568569324174
+    Halstead effort: 18.575424759098897
+
+  Function: afterconstructor
+    Line No.: 1808
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 3.111111111111111
+    Halstead volume: 103.61231210795059
+    Halstead effort: 322.3494154469574
+
+  Function: eq
+    Line No.: 1811
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.5
+    Halstead volume: 23.264662506490403
+    Halstead effort: 58.161656266226004
+
+  Function: LR_ClosureOperation
+    Line No.: 1816
+    Physical LOC: 38
+    Logical LOC: 12
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 16.666666666666664%
+    Halstead difficulty: 9.230769230769232
+    Halstead volume: 212.60741193467962
+    Halstead effort: 1962.5299563201197
+
+  Function: <anonymous>
+    Line No.: 1826
+    Physical LOC: 22
+    Logical LOC: 12
+    Parameter count: 1
+    Cyclomatic complexity: 6
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 11.261904761904761
+    Halstead volume: 420
+    Halstead effort: 4730
+
+  Function: <anonymous>
+    Line No.: 1837
+    Physical LOC: 6
+    Logical LOC: 3
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 66.66666666666666%
+    Halstead difficulty: 6.4
+    Halstead volume: 125.09775004326937
+    Halstead effort: 800.625600276924
+
+  Function: ll_aftercontructor
+    Line No.: 1864
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 2.4000000000000004
+    Halstead volume: 45
+    Halstead effort: 108.00000000000001
+
+  Function: llParseTable
+    Line No.: 1868
+    Physical LOC: 22
+    Logical LOC: 4
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 25%
+    Halstead difficulty: 5.25
+    Halstead volume: 62.907475208398566
+    Halstead effort: 330.26424484409245
+
+  Function: <anonymous>
+    Line No.: 1871
+    Physical LOC: 16
+    Logical LOC: 6
+    Parameter count: 2
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 7.25
+    Halstead volume: 247.5879750389425
+    Halstead effort: 1795.012819032333
+
+  Function: <anonymous>
+    Line No.: 1877
+    Physical LOC: 8
+    Logical LOC: 5
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 6.5
+    Halstead volume: 91.37651812938249
+    Halstead effort: 593.9473678409862
+
+  Function: Jison_Generator
+    Line No.: 1894
+    Physical LOC: 15
+    Logical LOC: 12
+    Parameter count: 2
+    Cyclomatic complexity: 5
+    Cyclomatic complexity density: 41.66666666666667%
+    Halstead difficulty: 9.117647058823529
+    Halstead volume: 261.5188126189908
+    Halstead effort: 2384.4362327025633
+
+  Function: Parser
+    Line No.: 1910
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 3.75
+    Halstead volume: 55.350905898196764
+    Halstead effort: 207.56589711823787
+
+/home/muhammadb/Desktop/jison_refactored/lib/util/set.js
+
+  Physical LOC: 90
+  Logical LOC: 81
+  Mean parameter count: 0.9230769230769231
+  Cyclomatic complexity: 13
+  Cyclomatic complexity density: 16.049382716049383%
+  Maintainability index: 138.0847189810957
+  Dependency count: 1
+
+  Function: Set_constructor
+    Line No.: 6
+    Physical LOC: 7
+    Logical LOC: 7
+    Parameter count: 2
+    Cyclomatic complexity: 4
+    Cyclomatic complexity density: 57.14285714285714%
+    Halstead difficulty: 9.375
+    Halstead volume: 202.04660144782298
+    Halstead effort: 1894.1868885733404
+
+  Function: concat
+    Line No.: 13
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 4.4
+    Halstead volume: 60.22857502740394
+    Halstead effort: 265.00573012057737
+
+  Function: eq
+    Line No.: 17
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 5
+    Halstead volume: 63.11663380285989
+    Halstead effort: 315.5831690142994
+
+  Function: indexOf
+    Line No.: 20
+    Physical LOC: 9
+    Logical LOC: 7
+    Parameter count: 1
+    Cyclomatic complexity: 4
+    Cyclomatic complexity density: 57.14285714285714%
+    Halstead difficulty: 13.444444444444446
+    Halstead volume: 190.16483617504394
+    Halstead effort: 2556.660575242258
+
+  Function: union
+    Line No.: 29
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.6666666666666665
+    Halstead volume: 49.82892142331044
+    Halstead effort: 132.8771237954945
+
+  Function: intersection
+    Line No.: 32
+    Physical LOC: 5
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2
+    Halstead volume: 24
+    Halstead effort: 48
+
+  Function: <anonymous>
+    Line No.: 33
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2
+    Halstead volume: 18.094737505048094
+    Halstead effort: 36.18947501009619
+
+  Function: complement
+    Line No.: 37
+    Physical LOC: 6
+    Logical LOC: 2
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 3.5999999999999996
+    Halstead volume: 41.51317942364757
+    Halstead effort: 149.44744592513123
+
+  Function: sub_complement
+    Line No.: 39
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.6666666666666665
+    Halstead volume: 22.458839376460833
+    Halstead effort: 59.89023833722889
+
+  Function: subset
+    Line No.: 43
+    Physical LOC: 7
+    Logical LOC: 5
+    Parameter count: 1
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 40%
+    Halstead difficulty: 9.5
+    Halstead volume: 150.11730005192322
+    Halstead effort: 1426.1143504932706
+
+  Function: superset
+    Line No.: 50
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2
+    Halstead volume: 18.094737505048094
+    Halstead effort: 36.18947501009619
+
+  Function: joinSet
+    Line No.: 53
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.25
+    Halstead volume: 30.880904142633646
+    Halstead effort: 69.4820343209257
+
+  Function: contains
+    Line No.: 56
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 3.125
+    Halstead volume: 31.699250014423125
+    Halstead effort: 99.06015629507226
+
+  Function: item
+    Line No.: 57
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.25
+    Halstead volume: 20.67970000576925
+    Halstead effort: 25.84962500721156
+
+  Function: i
+    Line No.: 58
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.25
+    Halstead volume: 20.67970000576925
+    Halstead effort: 25.84962500721156
+
+  Function: first
+    Line No.: 59
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 13.931568569324174
+    Halstead effort: 13.931568569324174
+
+  Function: last
+    Line No.: 60
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2.25
+    Halstead volume: 33.68825906469125
+    Halstead effort: 75.79858289555531
+
+  Function: size
+    Line No.: 61
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1
+    Halstead volume: 13.931568569324174
+    Halstead effort: 13.931568569324174
+
+  Function: isEmpty
+    Line No.: 62
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.5
+    Halstead volume: 22.458839376460833
+    Halstead effort: 33.68825906469125
+
+  Function: copy
+    Line No.: 63
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.5
+    Halstead volume: 15.509775004326936
+    Halstead effort: 23.264662506490403
+
+  Function: toString
+    Line No.: 64
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.5
+    Halstead volume: 18.094737505048094
+    Halstead effort: 27.14210625757214
+
+  Function: <anonymous>
+    Line No.: 67
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 2.7
+    Halstead volume: 45
+    Halstead effort: 121.50000000000001
+
+  Function: setMixin.e
+    Line No.: 68
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.5
+    Halstead volume: 43.18506523353572
+    Halstead effort: 64.77759785030358
+
+  Function: <anonymous>
+    Line No.: 71
+    Physical LOC: 4
+    Logical LOC: 2
+    Parameter count: 2
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 50%
+    Halstead difficulty: 2.7
+    Halstead volume: 45
+    Halstead effort: 121.50000000000001
+
+  Function: setMixin.e
+    Line No.: 72
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 2
+    Halstead volume: 59.207035490257475
+    Halstead effort: 118.41407098051495
+
+  Function: union
+    Line No.: 77
+    Physical LOC: 12
+    Logical LOC: 9
+    Parameter count: 2
+    Cyclomatic complexity: 4
+    Cyclomatic complexity density: 44.44444444444444%
+    Halstead difficulty: 16.363636363636363
+    Halstead volume: 262.36659345130676
+    Halstead effort: 4293.271529203202
+
+/home/muhammadb/Desktop/jison_refactored/lib/util/typal.js
+
+  Physical LOC: 82
+  Logical LOC: 61
+  Mean parameter count: 0.2727272727272727
+  Cyclomatic complexity: 12
+  Cyclomatic complexity density: 19.672131147540984%
+  Maintainability index: 118.91222555251572
+  Dependency count: 0
+
+  Function: <anonymous>
+    Line No.: 9
+    Physical LOC: 79
+    Logical LOC: 9
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 22.22222222222222%
+    Halstead difficulty: 4.857142857142857
+    Halstead volume: 156.0801066523054
+    Halstead effort: 758.1033751683404
+
+  Function: <anonymous>
+    Line No.: 11
+    Physical LOC: 1
+    Logical LOC: 3
+    Parameter count: 1
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 5
+    Halstead volume: 33
+    Halstead effort: 165
+
+  Function: F
+    Line No.: 11
+    Physical LOC: 1
+    Logical LOC: 0
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: Infinity%
+    Halstead difficulty: 0
+    Halstead volume: 0
+    Halstead effort: 0
+
+  Function: layerMethod
+    Line No.: 16
+    Physical LOC: 21
+    Logical LOC: 8
+    Parameter count: 2
+    Cyclomatic complexity: 3
+    Cyclomatic complexity density: 37.5%
+    Halstead difficulty: 7.142857142857143
+    Halstead volume: 205.13385445731566
+    Halstead effort: 1465.2418175522548
+
+  Function: <anonymous>.key
+    Line No.: 22
+    Physical LOC: 7
+    Logical LOC: 6
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 16.666666666666664%
+    Halstead difficulty: 5
+    Halstead volume: 145.94737505048093
+    Halstead effort: 729.7368752524046
+
+  Function: <anonymous>.key
+    Line No.: 30
+    Physical LOC: 5
+    Logical LOC: 3
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 33.33333333333333%
+    Halstead difficulty: 4.166666666666667
+    Halstead volume: 58.81033751683406
+    Halstead effort: 245.0430729868086
+
+  Function: typal_mix
+    Line No.: 41
+    Physical LOC: 20
+    Logical LOC: 19
+    Parameter count: 0
+    Cyclomatic complexity: 7
+    Cyclomatic complexity density: 36.84210526315789%
+    Halstead difficulty: 22.545454545454547
+    Halstead volume: 598.2637365325687
+    Halstead effort: 13488.127878188823
+
+  Function: typal_beget
+    Line No.: 69
+    Physical LOC: 3
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 2
+    Cyclomatic complexity density: 200%
+    Halstead difficulty: 3
+    Halstead volume: 53.1508495181978
+    Halstead effort: 159.45254855459342
+
+  Function: typal_construct
+    Line No.: 74
+    Physical LOC: 8
+    Logical LOC: 6
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 16.666666666666664%
+    Halstead difficulty: 5.454545454545454
+    Halstead volume: 155.3235879675129
+    Halstead effort: 847.2195707318886
+
+  Function: o.constructor
+    Line No.: 77
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 1.5
+    Halstead volume: 19.651484454403228
+    Halstead effort: 29.47722668160484
+
+  Function: typal_constructor
+    Line No.: 84
+    Physical LOC: 1
+    Logical LOC: 1
+    Parameter count: 0
+    Cyclomatic complexity: 1
+    Cyclomatic complexity density: 100%
+    Halstead difficulty: 0.5
+    Halstead volume: 2
+    Halstead effort: 1
+
+

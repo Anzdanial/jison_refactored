@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - lib/util/typal.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>lib/util/typal.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">69.54</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">90</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">45.45</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">0.69</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">/*
+ * Introduces a typal object to make classical/prototypal patterns easier
+ * Plus some AOP sugar
+ *
+ * By Zachary Carter &lt;zach@carter.name&gt;
+ * MIT Licensed
+ * */
+
+var typal = (function () {
+
+var create = Object.create || function (o) { function F(){} F.prototype = o; return new F(); };
+var position = /^(before|after)/;
+
+// basic method layering
+// always returns original method&#039;s return value
+function layerMethod(k, fun) {
+    var pos = k.match(position)[0],
+        key = k.replace(position, &#039;&#039;),
+        prop = this[key];
+
+    if (pos === &#039;after&#039;) {
+        this[key] = function () {
+            var ret = prop.apply(this, arguments);
+            var args = [].slice.call(arguments);
+            args.splice(0, 0, ret);
+            fun.apply(this, args);
+            return ret;
+        };
+    } else if (pos === &#039;before&#039;) {
+        this[key] = function () {
+            fun.apply(this, arguments);
+            var ret = prop.apply(this, arguments);
+            return ret;
+        };
+    }
+}
+
+// mixes each argument&#039;s own properties into calling object,
+// overwriting them or layering them. i.e. an object method &#039;meth&#039; is
+// layered by mixin methods &#039;beforemeth&#039; or &#039;aftermeth&#039;
+function typal_mix() {
+    var self = this;
+    for(var i=0,o,k; i&lt;arguments.length; i++) {
+        o=arguments[i];
+        if (!o) continue;
+        if (Object.prototype.hasOwnProperty.call(o,&#039;constructor&#039;))
+            this.constructor = o.constructor;
+        if (Object.prototype.hasOwnProperty.call(o,&#039;toString&#039;))
+            this.toString = o.toString;
+        for(k in o) {
+            if (Object.prototype.hasOwnProperty.call(o, k)) {
+                if(k.match(position) &amp;&amp; typeof this[k.replace(position, &#039;&#039;)] === &#039;function&#039;)
+                    layerMethod.call(this, k, o[k]);
+                else
+                    this[k] = o[k];
+            }
+        }
+    }
+    return this;
+}
+
+return {
+    // extend object with own typalperties of each argument
+    mix: typal_mix,
+
+    // sugar for object begetting and mixing
+    // - Object.create(typal).mix(etc, etc);
+    // + typal.beget(etc, etc);
+    beget: function typal_beget() {
+        return arguments.length ? typal_mix.apply(create(this), arguments) : create(this);
+    },
+
+    // Creates a new Class function based on an object with a constructor method
+    construct: function typal_construct() {
+        var o = typal_mix.apply(create(this), arguments);
+        var constructor = o.constructor;
+        var Klass = o.constructor = function () { return constructor.apply(this, arguments); };
+        Klass.prototype = o;
+        Klass.mix = typal_mix; // allow for easy singleton property extension
+        return Klass;
+    },
+
+    // no op
+    constructor: function typal_constructor() { return this; }
+};
+
+})();
+
+if (typeof exports !== &#039;undefined&#039;)
+    exports.typal = typal;</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>
