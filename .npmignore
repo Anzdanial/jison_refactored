@@ -1,4 +1,28 @@
+# Source files
 src/
+tests/
+__tests__/
+
+# Configuration files
+.eslintrc.js
+.babelrc
+jest.config.js
+.gitignore
+.editorconfig
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Development files
+coverage/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
 web/
 examples/
 ports/

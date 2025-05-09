@@ -1,158 +1,139 @@
-Jison
-=====
-* [issues](http://github.com/zaach/jison/issues)
-* [discuss](mailto:jison@librelist.com)
+# Jison Refactored
 
-[![build status](https://travis-ci.org/zaach/jison.svg)](http://travis-ci.org/zaach/jison)
+A refactored version of the Jison parser generator, implementing modern JavaScript practices and design patterns.
 
-An API for creating parsers in JavaScript
------------------------------------------
+## Features
 
-Jison generates bottom-up parsers in JavaScript. Its API is similar to Bison's, hence the name. It supports many of Bison's major features, plus some of its own. If you are new to parser generators such as Bison, and Context-free Grammars in general, a [good introduction][1] is found in the Bison manual. If you already know Bison, Jison should be easy to pickup.
+- Multiple parsing algorithms support:
+  - LR(0)
+  - SLR(1)
+  - LALR(1)
+  - LR(1)
+  - LL(1)
+- Modern JavaScript features (ES6+)
+- Improved error handling
+- Better state management
+- Comprehensive test coverage
+- Modular design
 
-Briefly, Jison takes a JSON encoded grammar or Bison style grammar and outputs a JavaScript file capable of parsing the language described by that grammar. You can then use the generated script to parse inputs and accept, reject, or perform actions based on the input.
+## Installation
 
-Installation
-------------
-Jison can be installed for [Node](http://nodejs.org) using [`npm`](http://github.com/isaacs/npm/)
+```bash
+npm install jison-refactored
+```
 
-Using npm:
-
-    npm install jison -g
-
-Usage from the command line
------------------------
-
-Clone the github repository for examples:
-
-    git clone git://github.com/zaach/jison.git
-    cd jison/examples
-
-Now you're ready to generate some parsers:
-
-    jison calculator.jison
-
-This will generate `calculator.js` in your current working directory. This file can be used to parse an input file, like so:
-
-    echo "2^32 / 1024" > testcalc
-    node calculator.js testcalc
-
-This will print out `4194304`.
-
-Full cli option list:
-
-    Usage: jison [file] [lexfile] [options]
-
-    file        file containing a grammar
-    lexfile     file containing a lexical grammar
-
-    Options:
-       -j, --json                    force jison to expect a grammar in JSON format
-       -o FILE, --outfile FILE       Filename and base module name of the generated parser
-       -t, --debug                   Debug mode
-       -m TYPE, --module-type TYPE   The type of module to generate (commonjs, amd, js)
-       -p TYPE, --parser-type TYPE   The type of algorithm to use for the parser (lr0, slr, lalr, lr)
-       -V, --version                 print version and exit
-
-
-Usage from a CommonJS module
---------------------------
-
-You can generate parsers programatically from JavaScript as well. Assuming Jison is in your commonjs environment's load path:
+## Usage
 
 ```javascript
-// mygenerator.js
-var Parser = require("jison").Parser;
+const Jison = require('jison-refactored');
 
-// a grammar in JSON
-var grammar = {
-    "lex": {
-        "rules": [
-           ["\\s+", "/* skip whitespace */"],
-           ["[a-f0-9]+", "return 'HEX';"]
-        ]
-    },
-
-    "bnf": {
-        "hex_strings" :[ "hex_strings HEX",
-                         "HEX" ]
+// Create a parser with a grammar
+const grammar = {
+    bnf: {
+        start: 'S',
+        productions: [
+            { symbol: 'S', handle: ['a', 'B'] },
+            { symbol: 'B', handle: ['b'] },
+            { symbol: 'B', handle: ['c'] }
+        ],
+        tokens: ['a', 'b', 'c']
     }
 };
 
-// `grammar` can also be a string that uses jison's grammar format
-var parser = new Parser(grammar);
+const parser = Jison(grammar, { type: 'lalr' });
 
-// generate source, ready to be written to disk
-var parserSource = parser.generate();
-
-// you can also use the parser directly from memory
-
-// returns true
-parser.parse("adfe34bc e82a");
-
-// throws lexical error
-parser.parse("adfe34bc zxg");
+// Parse input
+const result = parser.parse('ab');
 ```
 
-More Documentation
-------------------
-For more information on creating grammars and using the generated parsers, read the [documentation](http://jison.org/docs).
+## API
 
-How to contribute
------------------
+### Jison(grammar, options)
 
-See [CONTRIBUTING.md](https://github.com/zaach/jison/blob/master/CONTRIBUTING.md) for contribution guidelines, how to run the tests, etc.
+Creates a parser instance from a grammar specification.
 
-Projects using Jison
-------------------
+#### Parameters
 
-View them on the [wiki](https://github.com/zaach/jison/wiki/ProjectsUsingJison), or add your own.
+- `grammar` (Object): The grammar specification
+  - `bnf` (Object): The grammar in BNF format
+    - `start` (String): The start symbol
+    - `productions` (Array): Array of production rules
+    - `tokens` (Array): Array of terminal symbols
+- `options` (Object): Parser options
+  - `type` (String): Parser type ('lr0', 'slr', 'lalr', 'lr1', 'll')
+  - `debug` (Boolean): Enable debug mode
 
+#### Returns
 
-Contributors
-------------
-[Githubbers](http://github.com/zaach/jison/contributors)
+- `Parser`: A parser instance
 
-Special thanks to Jarred Ligatti, Manuel E. Bermúdez 
+### Parser.parse(input)
 
-License
--------
+Parses the input string according to the grammar.
 
-> Copyright (c) 2009-2014 Zachary Carter
-> 
->  Permission is hereby granted, free of
-> charge, to any person  obtaining a
-> copy of this software and associated
-> documentation  files (the "Software"),
-> to deal in the Software without 
-> restriction, including without
-> limitation the rights to use,  copy,
-> modify, merge, publish, distribute,
-> sublicense, and/or sell  copies of the
-> Software, and to permit persons to
-> whom the  Software is furnished to do
-> so, subject to the following 
-> conditions:
-> 
->  The above copyright notice and this
-> permission notice shall be  included
-> in all copies or substantial portions
-> of the Software.
-> 
->  THE SOFTWARE IS PROVIDED "AS IS",
-> WITHOUT WARRANTY OF ANY KIND,  EXPRESS
-> OR IMPLIED, INCLUDING BUT NOT LIMITED
-> TO THE WARRANTIES  OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND 
-> NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT  HOLDERS BE
-> LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY,  WHETHER IN AN ACTION OF
-> CONTRACT, TORT OR OTHERWISE, ARISING 
-> FROM, OUT OF OR IN CONNECTION WITH THE
-> SOFTWARE OR THE USE OR  OTHER DEALINGS
-> IN THE SOFTWARE.
+#### Parameters
 
+- `input` (String): The input string to parse
 
-  [1]: http://dinosaur.compilertools.net/bison/bison_4.html
+#### Returns
+
+- The parsed result
+
+## Development
+
+### Prerequisites
+
+- Node.js (v12 or higher)
+- npm
+
+### Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/jison-refactored.git
+cd jison-refactored
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+### Testing
+
+Run the test suite:
+```bash
+npm test
+```
+
+### Building
+
+Build the project:
+```bash
+npm run build
+```
+
+## Design Patterns Used
+
+- Factory Pattern: `ParserGeneratorFactory` creates appropriate parser generators
+- Template Method Pattern: `BaseGenerator` defines the skeleton of the generation algorithm
+- Strategy Pattern: Different parsing algorithms are implemented as separate classes
+- State Pattern: `ParserState` manages parser state transitions
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Original Jison project
+- All contributors and users of the project
 
